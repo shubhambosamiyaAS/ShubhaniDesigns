@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Designs - Shubhani Creations</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5f8fa;
       color: #333;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Header */
@@ -20,12 +31,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     header img {
       height: 50px;
+      max-width: 100%;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
     }
     nav a {
-      margin: 0 15px;
+      margin: 5px 10px;
       text-decoration: none;
       color: #5a7ea5;
       font-weight: bold;
@@ -35,14 +54,23 @@
       color: #3b5f82;
     }
 
+    /* Main content */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
     /* Designs Section */
     .designs {
       text-align: center;
       padding: 40px 20px;
+      flex: 1;
     }
     .designs h1 {
       color: #5a7ea5;
       margin-bottom: 30px;
+      font-size: 2rem;
     }
     .design-cards {
       display: grid;
@@ -50,6 +78,7 @@
       gap: 20px;
       max-width: 1000px;
       margin: auto;
+      width: 100%;
     }
     .card {
       background-color: white;
@@ -68,10 +97,15 @@
     .card img {
       max-width: 100%;
       border-radius: 8px;
+      height: auto;
     }
     .card h3 {
       color: #5a7ea5;
       margin: 15px 0 10px;
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     /* Footer */
@@ -81,7 +115,41 @@
       text-align: center;
       border-top: 2px solid #d6e4f0;
       color: #f5f5f6;
-      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Tablet adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        font-size: 0.95rem;
+      }
+      .designs h1 {
+        font-size: 1.7rem;
+      }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 480px) {
+      .designs {
+        padding: 20px 10px;
+      }
+      .designs h1 {
+        font-size: 1.4rem;
+      }
+      .card {
+        padding: 15px;
+      }
+      nav a {
+        margin: 5px;
+        font-size: 0.9rem;
+      }
+      .card p {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
@@ -92,33 +160,41 @@
     <img src="shubhani.png" alt="Shubhani Logo">
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="designs.html">Designs</a>
-      <a href="contact.html">Contact</a>
+      <a href="ShubhaniAboutus.html">About</a>
+      <a href="ShubhaniDesign.html">Designs</a>
+      <a href="ShubhaniContactus.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Designs Section -->
-  <section class="designs">
-    <h1>Select Your Design</h1>
-    <div class="design-cards">
-      <div class="card" onclick="alert('Poster Making Selected!')">
-        <img src="poster-sample.jpg" alt="Poster Design">
-        <h3>Poster Making</h3>
-        <p>Create eye-catching posters for events, businesses, and personal use.</p>
+  <!-- Main Content -->
+  <main>
+    <section class="designs">
+      <h1>Select Your Design</h1>
+      <div class="design-cards">
+        <a href="ShubhaniDesign2.html">
+          <div class="card">
+            <img src="poster-sample.jpg" alt="Poster Design">
+            <h3>Poster Making</h3>
+            <p>Create eye-catching posters for events, businesses, and personal use.</p>
+          </div>
+        </a>
+        <a href="ShubhaniDesign2.html">
+          <div class="card">
+            <img src="marriage-sample.jpg" alt="Marriage Invitation">
+            <h3>Marriage Invitation Card</h3>
+            <p>Beautifully designed wedding invitations to match your special day.</p>
+          </div>
+        </a>
+        <a href="ShubhaniDesign2.html">
+          <div class="card">
+            <img src="visiting-sample.jpg" alt="Visiting Card">
+            <h3>Visiting Card</h3>
+            <p>Professional visiting cards that leave a lasting impression.</p>
+          </div>
+        </a>
       </div>
-      <div class="card" onclick="alert('Marriage Invitation Selected!')">
-        <img src="marriage-sample.jpg" alt="Marriage Invitation">
-        <h3>Marriage Invitation Card</h3>
-        <p>Beautifully designed wedding invitations to match your special day.</p>
-      </div>
-      <div class="card" onclick="alert('Visiting Card Selected!')">
-        <img src="visiting-sample.jpg" alt="Visiting Card">
-        <h3>Visiting Card</h3>
-        <p>Professional visiting cards that leave a lasting impression.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
