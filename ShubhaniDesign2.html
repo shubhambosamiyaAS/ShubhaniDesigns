@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products - Shubhani Designs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #91b4c6; 
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header p {
+      margin: 5px 0 0;
+    }
+
+    /* PRODUCT SECTIONS */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #91b4c6;
+      margin-bottom: 20px;
+    }
+
+    .product-section {
+      margin-bottom: 50px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fef2ec; 
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-content h3 {
+      margin: 10px 0;
+      color: #91b4c6;
+    }
+
+    .card-content button {
+      background-color: #91b4c6;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card-content button:hover {
+      background-color: #6e94a8;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 10px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+      gap: 20px;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      min-width: 200px;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 10px;
+      color: #91b4c6;
+    }
+
+    .footer-section a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #91b4c6;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #555;
+      margin-top: 15px;
+      padding-top: 10px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* RESPONSIVE FOOTER */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Designs</h1>
+    <p>Poster | Invitation Cards | Visiting Cards</p>
+  </header>
+
+  <div class="container">
+    <!-- Visiting Cards -->
+    <div class="product-section">
+      <h2>Visiting Card Designs</h2>
+      <div class="products">
+        <div class="card">
+          <img src="visiting1.jpg" alt="Visiting Card 1">
+          <div class="card-content">
+            <h3>Elegant Black</h3>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="visiting2.jpg" alt="Visiting Card 2">
+          <div class="card-content">
+            <h3>Minimal White</h3>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Invitation Cards -->
+    <div class="product-section">
+      <h2>Invitation Card Designs</h2>
+      <div class="products">
+        <div class="card">
+          <img src="invite1.jpg" alt="Invitation Card 1">
+          <div class="card-content">
+            <h3>Royal Gold</h3>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="invite2.jpg" alt="Invitation Card 2">
+          <div class="card-content">
+            <h3>Floral Pink</h3>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posters -->
+    <div class="product-section">
+      <h2>Poster Designs</h2>
+      <div class="products">
+        <div class="card">
+          <img src="poster1.jpg" alt="Poster 1">
+          <div class="card-content">
+            <h3>Event Promo</h3>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="poster2.jpg" alt="Poster 2">
+          <div class="card-content">
+            <h3>Sale Poster</h3>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Responsive Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>We design posters, invitation cards, and visiting cards with creativity and elegance.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="design.html">Designs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: info@shubhanidesigns.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Location: Bhavnagar, Gujarat</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shubhani Designs | All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

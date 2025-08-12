@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designs - Shubhani Creations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #93b6cd;
+      padding: 15px 30px;
+      border-bottom: 2px solid #d6e4f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #5a7ea5;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #3b5f82;
+    }
+
+    /* Designs Section */
+    .designs {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .designs h1 {
+      color: #5a7ea5;
+      margin-bottom: 30px;
+    }
+    .design-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #d6e4f0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      color: #5a7ea5;
+      margin: 15px 0 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      border-top: 2px solid #d6e4f0;
+      color: #f5f5f6;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="shubhani.png" alt="Shubhani Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="designs.html">Designs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Designs Section -->
+  <section class="designs">
+    <h1>Select Your Design</h1>
+    <div class="design-cards">
+      <div class="card" onclick="alert('Poster Making Selected!')">
+        <img src="poster-sample.jpg" alt="Poster Design">
+        <h3>Poster Making</h3>
+        <p>Create eye-catching posters for events, businesses, and personal use.</p>
+      </div>
+      <div class="card" onclick="alert('Marriage Invitation Selected!')">
+        <img src="marriage-sample.jpg" alt="Marriage Invitation">
+        <h3>Marriage Invitation Card</h3>
+        <p>Beautifully designed wedding invitations to match your special day.</p>
+      </div>
+      <div class="card" onclick="alert('Visiting Card Selected!')">
+        <img src="visiting-sample.jpg" alt="Visiting Card">
+        <h3>Visiting Card</h3>
+        <p>Professional visiting cards that leave a lasting impression.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Shubhani Creations. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
