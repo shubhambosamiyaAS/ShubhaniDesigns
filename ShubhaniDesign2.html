@@ -1,81 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Products - Shubhani Designs</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shubhani Designs</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* RESET + BASE */
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
       margin: 0;
+      font-family: Arial, sans-serif;
       background-color: #f8f8f8;
       color: #333;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
     }
 
     /* HEADER */
     header {
-      background-color: #91b4c6; 
+      background-color: #91b4c6;
       color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 20px 10px;
     }
-
     header h1 {
       margin: 0;
+      font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
     }
-
     header p {
       margin: 5px 0 0;
+      font-size: clamp(0.9rem, 1vw + 0.5rem, 1rem);
     }
 
-    /* PRODUCT SECTIONS */
+    /* MAIN CONTENT */
+    main {
+      flex: 1;
+    }
     .container {
       max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
-
     h2 {
       text-align: center;
       color: #91b4c6;
       margin-bottom: 20px;
+      font-size: clamp(1.4rem, 1.5vw + 1rem, 1.8rem);
     }
 
     .product-section {
       margin-bottom: 50px;
     }
-
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
+    /* PRODUCT CARD */
     .card {
-      background: #fef2ec; 
+      background: #fef2ec;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
       animation: fadeIn 1s ease forwards;
+      display: flex;
+      flex-direction: column;
     }
-
     .card img {
       width: 100%;
-      height: 180px;
+      height: auto;
+      max-height: 180px;
       object-fit: cover;
     }
-
     .card-content {
       padding: 15px;
       text-align: center;
+      flex: 1;
     }
-
     .card-content h3 {
       margin: 10px 0;
       color: #91b4c6;
+      font-size: clamp(1rem, 1vw + 0.8rem, 1.2rem);
     }
-
     .card-content button {
       background-color: #91b4c6;
       color: white;
@@ -84,17 +96,15 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s;
+      font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1rem);
     }
-
     .card-content button:hover {
       background-color: #6e94a8;
     }
-
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
-
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
@@ -106,7 +116,6 @@
       color: white;
       padding: 20px 10px;
     }
-
     .footer-container {
       display: flex;
       justify-content: space-between;
@@ -115,29 +124,26 @@
       margin: auto;
       gap: 20px;
     }
-
     .footer-section {
       flex: 1 1 200px;
       min-width: 200px;
     }
-
     .footer-section h4 {
       margin-bottom: 10px;
       color: #91b4c6;
+      font-size: 1.1rem;
     }
-
     .footer-section a {
       display: block;
       color: white;
       text-decoration: none;
       margin: 5px 0;
       transition: color 0.3s;
+      font-size: 0.95rem;
     }
-
     .footer-section a:hover {
       color: #91b4c6;
     }
-
     .footer-bottom {
       text-align: center;
       border-top: 1px solid #555;
@@ -147,88 +153,103 @@
       color: #aaa;
     }
 
-    /* RESPONSIVE FOOTER */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .footer-container {
         flex-direction: column;
         text-align: center;
+      }
+      .products {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+    @media (max-width: 480px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+      .card img {
+        max-height: 150px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <h1>Our Designs</h1>
     <p>Poster | Invitation Cards | Visiting Cards</p>
   </header>
 
-  <div class="container">
-    <!-- Visiting Cards -->
-    <div class="product-section">
-      <h2>Visiting Card Designs</h2>
-      <div class="products">
-        <div class="card">
-          <img src="visiting1.jpg" alt="Visiting Card 1">
-          <div class="card-content">
-            <h3>Elegant Black</h3>
-            <button>Add to Cart</button>
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <!-- Visiting Cards -->
+      <div class="product-section">
+        <h2>Visiting Card Designs</h2>
+        <div class="products">
+          <div class="card">
+            <img src="1.png" alt="Visiting Card 1">
+            <div class="card-content">
+              <h3>Elegant Black</h3>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="2.png" alt="Visiting Card 2">
+            <div class="card-content">
+              <h3>Minimal White</h3>
+              <button>Add to Cart</button>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <img src="visiting2.jpg" alt="Visiting Card 2">
-          <div class="card-content">
-            <h3>Minimal White</h3>
-            <button>Add to Cart</button>
+      </div>
+
+      <!-- Invitation Cards -->
+      <div class="product-section">
+        <h2>Invitation Card Designs</h2>
+        <div class="products">
+          <div class="card">
+            <img src="invitationVideo.mp4" alt="Invitation Card 1">
+            <div class="card-content">
+              <h3>Royal Gold</h3>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="invite2.jpg" alt="Invitation Card 2">
+            <div class="card-content">
+              <h3>Floral Pink</h3>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Posters -->
+      <div class="product-section">
+        <h2>Poster Designs</h2>
+        <div class="products">
+          <div class="card">
+            <img src="poster.png" alt="Poster 1">
+            <div class="card-content">
+              <h3>Event Promo</h3>
+              <button>Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="company templates.png" alt="Poster 2">
+            <div class="card-content">
+              <h3>Sale Poster</h3>
+              <button>Add to Cart</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </main>
 
-    <!-- Invitation Cards -->
-    <div class="product-section">
-      <h2>Invitation Card Designs</h2>
-      <div class="products">
-        <div class="card">
-          <img src="invite1.jpg" alt="Invitation Card 1">
-          <div class="card-content">
-            <h3>Royal Gold</h3>
-            <button>Add to Cart</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="invite2.jpg" alt="Invitation Card 2">
-          <div class="card-content">
-            <h3>Floral Pink</h3>
-            <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Posters -->
-    <div class="product-section">
-      <h2>Poster Designs</h2>
-      <div class="products">
-        <div class="card">
-          <img src="poster1.jpg" alt="Poster 1">
-          <div class="card-content">
-            <h3>Event Promo</h3>
-            <button>Add to Cart</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="poster2.jpg" alt="Poster 2">
-          <div class="card-content">
-            <h3>Sale Poster</h3>
-            <button>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Responsive Footer -->
+  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-section">
@@ -238,15 +259,14 @@
       <div class="footer-section">
         <h4>Quick Links</h4>
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="design.html">Designs</a>
-        <a href="products.html">Products</a>
-        <a href="contact.html">Contact</a>
+        <a href="ShubhaniAboutus.html">About</a>
+        <a href="ShubhaniDesign.html">Designs</a>
+        <a href="ShubhaniContactus.html">Contact</a>
       </div>
       <div class="footer-section">
         <h4>Contact</h4>
         <p>Email: info@shubhanidesigns.com</p>
-        <p>Phone: +91 9876543210</p>
+        <p>Phone: +91 9824267494</p>
         <p>Location: Bhavnagar, Gujarat</p>
       </div>
     </div>
